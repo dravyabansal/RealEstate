@@ -1,4 +1,4 @@
-import React from "react";
+
 import Link  from "next/link";
 import {
   Menu,
@@ -9,16 +9,15 @@ import {
   Flex,
   Box,
   Spacer,
-  Text,
-  Avatar,
+ 
 } from "@chakra-ui/react";
-import { FaBars, FcMenu, FcHome, FcAbout } from "react-icons/fa";
+import { FcMenu, FcHome, FcAbout } from "react-icons/fa";
 import { FiKey } from "react-icons/fi";
 import { BsSearch } from "react-icons/bs";
 
 const Navbar = () => (
-  <>
-    <Flex>
+
+    <Flex p='2 ' borderBottom='gray.100'>
       <Box fontSize="3xl" color="blue.400" fontWeight="bold">
         <Link href="/" passHref />
         {" RealTor"}
@@ -50,7 +49,7 @@ const Navbar = () => (
         </Menu>
       </Box>
     </Flex>
-  </>
+
 );
 
 export default Navbar;

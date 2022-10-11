@@ -13,6 +13,7 @@ const LeftArrow = () => {
         onClick={() => scrollPrev()}
         fontSize="2xl"
         cursor="pointer"
+        d={['none','none','none','block']}
       />
     </Flex>
   );
@@ -27,17 +28,18 @@ const RightArrow = () => {
         onClick={() => scrollNext()}
         fontSize="2xl"
         cursor="pointer"
+        d={['none','none','none','block']}
       />
     </Flex>
   );
 };
 
 const ImageScrollebar = ({data}) => (
-  <>
-    <ScrollMenu LeftArrow={LeftArrow}>
+
+    <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
       {data &&
         data.map((item) => (
-          <Box key={item.id} width="910px" itemId={item.id} overflow="hidden">
+          <Box key={item.id} width="910px" p='1' itemId={item.id} overflow="hidden">
             <Image
               placeholder="blur"
               blurDataURL={item.url}
@@ -50,7 +52,6 @@ const ImageScrollebar = ({data}) => (
           </Box>
         ))}
     </ScrollMenu>
-  </>
 );
 
 export default ImageScrollebar;

@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import { Box, Flex, Text } from "@chakra-ui/layout";
 import { Avatar } from "@chakra-ui/avatar";
@@ -45,7 +44,7 @@ const Property = ({
             <Box paddingRight="3" color="green.400">
               {isVerified && <GoVerified />}
             </Box>
-            <Text>
+            <Text fontWeight="bold" fontSize="lg">
               AED {price}
               {rentFrequency && `/${rentFrequency}`}
             </Text>
