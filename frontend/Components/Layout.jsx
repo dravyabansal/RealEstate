@@ -1,33 +1,23 @@
-import React from 'react'
-import {Box } from '@chakra-ui/react'
-import Footer from './Footer'
-import Navbar from './Navbar'
-import Head from 'next/head'
+import { Box } from "@chakra-ui/react";
+import Footer from "./Footer";
+import Navbar from "./Navbar";
+import Head from "next/head";
 
-
-
-const Layout = ({children}) => {
+export default function Layout({ children }) {
   return (
     <>
-    <Head>
+      <Head>
         <title>98 Acre</title>
-
-    </Head>
-    <Box>
+      </Head>
+      <Box maxWidth="1280px" m="auto">
         <header>
-            <Navbar/>
+          <Navbar />
         </header>
-        <main>
-            {children}
-
-        </main>
+        <main>{children}</main>
         <footer>
-            <Footer/>
+          <Footer />
         </footer>
-    </Box>
-
+      </Box>
     </>
-  )
+  );
 }
-
-export default Layout
